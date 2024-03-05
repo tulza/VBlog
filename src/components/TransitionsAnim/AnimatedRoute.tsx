@@ -3,6 +3,7 @@ import { Route, Routes, Navigate, useLocation } from "react-router-dom";
 import Template from "@pages/Template";
 import TransitionAnimation from "./TransitionAnimation";
 import TestPage from "@pages/TestPage";
+import PageNotFound from "@pages/PageNotFound";
 
 const AnimatedRoute = () => {
   const location = useLocation();
@@ -12,7 +13,8 @@ const AnimatedRoute = () => {
         <Routes location={location}>
           <Route path="/template" element={<Template />} />
           <Route path="/card" element={<TestPage />} />
-          <Route path="*" element={<Navigate to="/template" />} />
+          <Route path="/" element={<Template />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </TransitionAnimation>
     </AnimatePresence>
