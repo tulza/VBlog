@@ -4,8 +4,9 @@ import { motion } from "framer-motion";
 const Navigation = () => {
   return (
     <>
-      <div className="absolute flex w-full justify-center gap-8 p-8">
+      <div className="absolute bottom-0 flex w-full justify-center gap-8 p-8">
         <NavButton name="template" />
+        <NavButton name="home" />
         <NavButton name="card" />
       </div>
     </>
@@ -17,7 +18,7 @@ const NavButton = ({ name }: { name: string }) => {
     <Link to={`${name}`}>
       <motion.div whileHover="hover">
         <motion.div
-          className="border-4 border-background bg-white p-4 px-8 font-bold text-black"
+          className="z-10 border-4 border-background bg-white p-4 px-8 font-bold text-black"
           variants={{ hover: { y: 10, borderColor: "var(--white)" } }}
         >
           <code>{name}</code>
