@@ -13,11 +13,9 @@ const PageNotFound = () => {
         <div className="text-3xl font-bold">Page Not Found</div>
         <hr className="my-4 w-[400px] rounded-lg bg-white" />
         <div className="w-full">
-          <Link to="/">
-            <div className="w-min whitespace-nowrap rounded-xl p-2 px-8 outline">
-              Go to Home
-            </div>
-          </Link>
+          <div className="w-min whitespace-nowrap rounded-xl p-2 px-8 outline">
+            <Link to="/">Go to Home</Link>
+          </div>
         </div>
       </motion.div>
     </div>

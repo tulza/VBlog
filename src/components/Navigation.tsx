@@ -17,7 +17,7 @@ const NavButton = ({ name }: { name: string }) => {
     <Link to={`${name}`}>
       <motion.div whileHover="hover">
         <motion.div
-          className="outline-6 rounded-full border-4 border-background bg-element p-4 px-8 font-bold shadow-lg shadow-background outline outline-element"
+          className="border-4 border-background bg-white p-4 px-8 font-bold text-black"
           variants={{ hover: { y: 10, borderColor: "var(--white)" } }}
         >
           <code>{name}</code>

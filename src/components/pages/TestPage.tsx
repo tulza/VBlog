@@ -1,32 +1,27 @@
+import BlogCard from "@components/BlogCard";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const TestPage = () => {
+  const [Toggle, SetToggled] = useState(false);
   return (
     <div className="bg-yellow grid h-full w-full place-content-center bg-yellow-400 text-black">
       {/* card */}
+      <div className="mb-4 flex gap-8">
+        <BlogCard />
+        <BlogCard />
+        <BlogCard />
+      </div>
       <motion.div
-        className="flex h-[400px] w-[300px] cursor-pointer select-none flex-col gap-4 rounded-xl border border-black bg-white p-6"
-        initial={{ boxShadow: "#000 5px 5px" }}
-        whileHover={{ boxShadow: "#000 20px 20px" }}
+        className="flex h-[30px] w-[60px] cursor-pointer rounded-full bg-white p-1 outline outline-1"
+        onClick={() => SetToggled(!Toggle)}
+        initial={{ justifyContent: "flex-start" }}
+        animate={{ justifyContent: Toggle ? "flex-start" : "flex-end" }}
+        transition={{ duration: 2 }}
+        key={Toggle ? "On" : "off"}
+        layout
       >
-        <div className="h-[150px] w-full rounded-lg border border-black bg-white"></div>
-        {/* tags */}
-        <div className="flex h-[30px] w-full items-center gap-1">
-          <div className="w-min rounded-md bg-yellow-400 px-2 font-bold tracking-tighter text-black">
-            Learning
-          </div>
-          <div className="w-min rounded-md bg-yellow-400 px-2 font-bold tracking-tighter text-black">
-            Learning
-          </div>
-        </div>
-        <div className="text-sm font-bold text-zinc-500">
-          Published 21 Dec 2023
-        </div>
-        <div className="text-xl font-bold ">HTML & CSS</div>
-        <div className="text-sm font-bold text-zinc-500">
-          HTML & CSS is a fundamental skill for building web pages and web apps,
-          vital for creating visually appealing and functional websites.
-        </div>
+        <motion.div className="aspect-square h-full rounded-full bg-black " />
       </motion.div>
     </div>
   );
