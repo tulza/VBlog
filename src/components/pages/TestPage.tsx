@@ -1,7 +1,8 @@
 import BlogCard from "@components/BlogCard";
+import LayoutButton from "@components/LayoutButton";
 import ToggleButton from "@components/ToggleButton";
 
-const TestPage = () => {
+const ComponentTesting = () => {
   return (
     <div className="bg-yellow grid h-full w-full place-content-center bg-yellow-400 text-black">
       {/* card */}
@@ -11,8 +12,9 @@ const TestPage = () => {
         <BlogCard />
       </div>
       <ToggleButton />
+      <LayoutButton className="mt-2" />
     </div>
   );
 };
 
-export default TestPage;
+export default ComponentTesting;

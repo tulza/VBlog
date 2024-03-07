@@ -7,7 +7,7 @@ const Navigation = () => {
       <div className="absolute bottom-0 flex w-full justify-center gap-8 p-8">
         <NavButton name="template" />
         <NavButton name="home" />
-        <NavButton name="card" />
+        <NavButton name="test" />
       </div>
     </>
   );
