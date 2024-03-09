@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: #000;
+  --background: #0b0916;
   --text: hsl(0, 0%, 100%);
 
   --gray: #212425;
@@ -36,4 +36,20 @@ html {
 
 .TextStroke {
   -webkit-text-stroke: #000 2px;
+}
+
+.bg-radial {
+  background: radial-gradient(
+    closest-side,
+    rgba(132, 153, 229, 0.21) 0%,
+    rgba(62, 21, 58, 0) 100%
+  );
+}
+
+.bg-radial2 {
+  background: radial-gradient(
+    closest-side,
+    rgba(229, 132, 220, 0.21) 0%,
+    rgba(75, 30, 71, 0) 100%
+  );
 }
